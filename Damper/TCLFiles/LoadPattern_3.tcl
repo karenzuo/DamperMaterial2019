@@ -5,7 +5,7 @@ pattern  Plain       1       2  {
     # Load    nodeTag    LoadValues 
  
     # SP    nodeTag    dofTag    DispValue 
-    sp       2     1  +1.000000E+000 
+    sp       2     1  +1.000000E-002 
  
     # eleLoad    eleTags    beamUniform    Wy    <Wx> 
  

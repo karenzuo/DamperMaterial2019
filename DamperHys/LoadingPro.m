@@ -5,7 +5,7 @@ clear;
 clc;
 Amp = [20 40 60 80 100];
 Increment = 1;
-nCycles = 1;
+nCycles = 2;
 k=1;
 dt = 0.01;
 V(1) = 0;

@@ -54,22 +54,25 @@ source  TimeSeries.tcl
 # --------------------- 
 initialize 
 
-# Analysis: LoadP 
-# +++++++++++++++ 
+# Analysis: EigenDefaultCase 
+# ++++++++++++++++++++++++++ 
 
 # Define load pattern 
 # ------------------- 
-source  LoadPattern_3.tcl 
+source  LoadPattern_2.tcl 
 
 # Define recorder(s) 
 # -------------------- 
-source  Recorder_3.tcl 
+source  Recorder_2.tcl 
 
 # Define analysis options 
 # ----------------------- 
-source  AnalysisOptn_4.tcl 
+source  AnalysisOptn_3.tcl 
 
-analyze    10 
+set eigFID [open EigenDefaultCase_Node_EigenVector_EigenVal.out w] 
+puts $eigFID [eigen  generalized  fullGenLapack     3] 
+close $eigFID 
+analyze  1  0.0001 
 
 # Clean up 
 # -------- 
